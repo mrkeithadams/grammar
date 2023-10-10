@@ -1,67 +1,31 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!DOCTYPE grammar PUBLIC "-//W3C//DTD GRAMMAR 1.0//EN"
-                  "http://www.w3.org/TR/speech-grammar/grammar.dtd">
- 
-<!-- the default grammar language is US English -->
-<var name="var1" expr="1" />
-<grammar type="application/srgs+xml" root="alphanum" mode="voice">
-	<rule id="alphanum" scope="public">
-		<item repeat="1-10"> 
-			<item> 
-				<one-of> 
-					<item><ruleref uri="#alphabet"/></item> 
-					<item><ruleref uri="#digit"/></item> 
-				</one-of> 
-			</item> 
-		</item> 
-	</rule> 
-
-
-	<rule id="alphabet"> 
-		<one-of> 
-			<item>A</item> 
-			<item>B</item> 
-			<item>C</item> 
-			<item>D</item> 
-			<item>E</item> 
-			<item>F</item> 
-			<item>G</item> 
-			<item>H</item> 
-			<item>I</item> 
-			<item>J</item> 
-			<item>K</item> 
-			<item>L</item> 
-			<item>M</item> 
-			<item>N</item> 
-			<item>O</item> 
-			<item>P</item> 
-			<item>Q</item> 
-			<item>R</item> 
-			<item>S</item> 
-			<item>T</item> 
-			<item>U</item> 
-			<item>V</item> 
-			<item>W</item> 
-			<item>X</item> 
-			<item>Y</item> 
-			<item>Z</item> 
-		</one-of> 
-	</rule> 
-
-
-	<rule id="digit">
-		<one-of> 
-			<item>0</item> 
-			<item>1</item> 
-			<item>2</item> 
-			<item>3</item> 
-			<item>4</item> 
-			<item>5</item> 
-			<item>6</item> 
-			<item>7</item> 
-			<item>8</item> 
-			<item>9</item> 
-		</one-of> 
-	</rule>
+<!--Header-->
+<?xml version="1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+xml:lang="en-US"
+root="yesorno"
+mode="voice">
+<!--Rules-->
+<rule id="yesorno">
+<one-of>
+<item><ruleref 
+ uri="#yes" /></item>
+<item><ruleref 
+ uri="#no" /></item>
+</one-of>
+</rule>
+<rule id="yes">
+<one-of>
+<item>yes</item>
+<item>correct</item>
+<item>yeah</item>
+<item>affirmative</item>
+</one-of>
+</rule>
+<rule id="no">
+<one-of>
+<item>no</item>
+<item>nope</item>
+<item>negative</item>
+</one-of>
+</rule>
 </grammar>
