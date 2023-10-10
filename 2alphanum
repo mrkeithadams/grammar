@@ -4,6 +4,7 @@
 xml:lang="en-US"
 root="yesorno"
 mode="voice">
+<var name="var1" expr="1" />
 <!--Rules-->
 <rule id="yesorno">
 <one-of>
