@@ -1,0 +1,32 @@
+<!--Header-->
+<?xml version="1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+xml:lang="en-US"
+root="yesorno"
+mode="voice">
+
+<!--Rules-->
+<rule id="yesorno">
+<one-of>
+<item><ruleref 
+ uri="#yes" /></item>
+<item><ruleref 
+ uri="#no" /></item>
+</one-of>
+</rule>
+<rule id="yes">
+<one-of>
+<item>yes</item>
+<item>correct</item>
+<item>yeah</item>
+<item>affirmative</item>
+</one-of>
+</rule>
+<rule id="no">
+<one-of>
+<item>no</item>
+<item>nope</item>
+<item>negative</item>
+</one-of>
+</rule>
+</grammar>
